@@ -1,0 +1,73 @@
+/* Benefits comparison, renewal example and employer guide. */
+.page-healthbenefits {
+  --benefits-navy: #24345b;
+  --benefits-blue: #285fae;
+  --benefits-text: #405773;
+  --benefits-line: #d7e2f0;
+  --benefits-wash: #f1f5fc;
+}
+.page-healthbenefits :focus-visible {
+  outline: 3px solid #286c9b;
+  outline-offset: 4px;
+}
+.page-healthbenefits .review :focus-visible { outline-color: #fff; }
+.benefits-section { padding: clamp(52px, 7vw, 88px) 0; }
+.benefits-compare { background: var(--benefits-wash); }
+.benefits-heading { max-width: 720px; }
+.benefits-heading h2 {
+  font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+  line-height: 1.15;
+  margin-top: 14px;
+}
+.benefits-heading p, .benefits-example, .benefits-guide article p {
+  color: var(--benefits-text);
+}
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 30px 0 25px;
+}
+.plan-card {
+  background: #fff;
+  border: 1px solid var(--benefits-line);
+  border-top: 3px solid #c9b181;
+  border-radius: 5px;
+  padding: clamp(20px, 2.6vw, 31px);
+}
+.plan-card h3 { color: var(--benefits-navy); margin: 10px 0 14px; }
+.plan-card p { margin: 0; }
+.plan-card dl { margin: 18px 0 0; }
+.plan-card dt { font-weight: 700; margin: 15px 0 4px; }
+.plan-card dd { margin: 0; color: var(--benefits-text); }
+.benefits-example {
+  margin: 0;
+  padding: 15px 20px;
+  border-left: 3px solid #9bb8dc;
+  background: #fff;
+}
+.benefits-actions {
+  align-items: center;
+  margin-top: 26px;
+  column-gap: 23px;
+}
+.benefits-actions .textlink { color: var(--benefits-blue); }
+.audience + .benefits-compare { scroll-margin-top: 20px; }
+.renewal-steps { margin: 0; }
+.renewal-steps > div { border-top: 1px solid #61718e; padding: 14px 0; }
+.renewal-steps dt { font-weight: 700; }
+.renewal-steps dd { margin: 4px 0 0; }
+.inner-page .review .renewal-steps p { font-size: .94rem; line-height: 1.65; margin: 0; }
+.inner-page .review .renewal-caption { font-size: .82rem; line-height: 1.5; margin-top: 10px; }
+.benefits-guide .guide-intro { background: var(--benefits-wash); }
+.benefits-guide .guide-intro .textlink { color: var(--benefits-blue); }
+.benefits-guide .guide-intro h1 { max-width: 860px; }
+.benefits-guide article { max-width: 850px; }
+.benefits-guide article section + section { border-top: 1px solid var(--benefits-line); margin-top: 30px; padding-top: 22px; }
+.benefits-guide article h2 { font-size: clamp(1.5rem, 3vw, 2.15rem); line-height: 1.25; }
+.benefits-guide article ul { padding-left: 1.4em; }
+.benefits-guide article li { margin: 8px 0; }
+.benefits-guide .guide-next { padding: 23px; background: var(--benefits-wash); border-radius: 5px; }
+@media (max-width: 850px) {
+  .plan-grid { grid-template-columns: 1fr; }
+}
